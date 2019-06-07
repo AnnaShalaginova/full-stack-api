@@ -57,4 +57,9 @@ class UsersController < ProtectedController
     params.require(:passwords)
           .permit(:old, :new)
   end
+
+  def activity_params
+    params.require(:activities)
+          .permit(:user_id)
+  end
 end
