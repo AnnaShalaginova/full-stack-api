@@ -6,10 +6,6 @@ class ActivitiesController < OpenReadController
     @activities = Activity.all
     render json: @activities
   end
-  # def index
-  #   @activities = Activity.all
-  #   render json: @activities
-  # end
 
   # GET /activities/1
   def show
@@ -40,18 +36,20 @@ class ActivitiesController < OpenReadController
     if @activity.update(activity_params)
       render json: @activity
     else
-          render json: @activity.errors, status: :unprocessable_entity
+      render json: @activity.errors, status: :unprocessable_entity
     end
   end
 
+
+
   # # PATCH/PUT /activities/1
-  # def update
-  #   if @activity.update(activity_params)
-  #     render json: @activity
-  #   else
-  #     render json: @activity.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @activity.update(activity_params)
+      render json: @activity
+    else
+      render json: @activity.errors, status: :unprocessable_entity
+    end
+  end
 
   # DELETE /activities/1
   def destroy
