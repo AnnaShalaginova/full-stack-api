@@ -1,9 +1,9 @@
-class ActivitiesController < OpenReadController
+class ActivitiesController < ProtectedController
   before_action :set_activity, only: [:show, :update, :destroy]
 
   # GET /activities
   def index
-    @activities = Activity.all
+    @activities = current_user.activities.all
     render json: @activities
   end
 
@@ -51,7 +51,7 @@ class ActivitiesController < OpenReadController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_activity
-      @activity = Activity.find(params[:id])
+      @activity = current_user.activities.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
