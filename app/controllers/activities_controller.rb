@@ -43,6 +43,8 @@ class ActivitiesController < OpenReadController
   # DELETE /activities/1
   def destroy
     @activity.destroy
+
+    head :no_content
   end
 
   private
