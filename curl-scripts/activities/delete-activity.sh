@@ -1,4 +1,4 @@
-curl "http://localhost:4741/update-activity/${ID}" \
+curl "http://localhost:4741/activities/${ID}" \
   --include \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}" \
