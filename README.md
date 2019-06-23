@@ -1,5 +1,5 @@
 GITHUB LINK TO FRONT END
-https://github.com/Annabelle130/SportsCalendar-client
+https://github.com/annashalaginova/SportsCalendar-client
 
 PURPOSE
 
